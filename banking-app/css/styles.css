@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Google Icons */
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-icons-two-tone {
+  vertical-align: middle;
+  line-height: 1px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+.container {
+  width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+}
+
+h4 {
+  font-weight: 600;
+}
+
+p strong {
+  font-weight: 500;
+}
+
+.fadeIn {
+  opacity: 0;
+  transform: scale(0);
+  -webkit-animation: fadeIn 0.2s ease;
+          animation: fadeIn 0.2s ease;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes fadeIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.card, .card-small {
+  background-color: #fff;
+  box-shadow: 0 5px 8px #d3d3d380;
+  border: 1px solid #dddddd;
+  padding: 13px;
+  border-radius: 5px;
+  transition: box-shadow 0.15s ease;
+}
+
+.card-small {
+  background-color: #f1f1f1;
+}
+.card-small:hover {
+  box-shadow: 0 5px 10px #b4b4b480;
+  border-color: #e6e6e6;
+}
+
+.btn {
+  background: #f1f1f1;
+  border: 1px solid #dddddd;
+  box-shadow: 0 5px 8px #d3d3d380;
+  transition: 0.2s ease;
+  transition-property: box-shadow, background-color;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 5px 10px #b4b4b480;
+  border-color: #e6e6e6;
+}
+
+.btn.bg-secondary {
+  background: #40454e;
+  box-shadow: 0 5px 8px #c5c5c5;
+  border-color: transparent;
+  color: #fff;
+}
+.btn.bg-secondary:hover {
+  background: #33383d;
+  box-shadow: 0 5px 8px #aaaaaa;
+}
+.btn.bg-secondary:disabled {
+  background: #adadad;
+  cursor: default;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+}
+.input-group .input-group.inline {
+  display: inline-block;
+}
+
+.inline-group {
+  display: flex;
+  gap: 1rem;
+}
+.inline-group > * {
+  width: 100%;
+}
+
+.form-control {
+  outline: none;
+  width: 100%;
+  border: 1px solid #dddddd;
+  padding: 5px 7px;
+}
+
+.form-control.text-right {
+  text-align: right;
+}
+
+.form-control.invalid {
+  border-color: #ff0000;
+}
+
+select {
+  outline: none;
+  border: 1px solid #dddddd;
+  padding: 5px 7px;
+  width: 100%;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.75);
+}
+.modal-wrapper .modal {
+  position: relative;
+  background: white;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 5rem;
+  max-width: 500px;
+}
+.modal-wrapper .modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #dddddd;
+  margin-bottom: 10px;
+}
+.modal-wrapper .modal-header h4 {
+  font-weight: 600;
+}
+.modal-wrapper .modal-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.modal-wrapper .modal-save {
+  margin-top: 7px;
+  padding: 7px 25px;
+}
+
+.app-header {
+  background-color: #fff;
+  border-bottom: 1px solid #dddddd;
+  padding: 15px;
+  box-shadow: 0 5px 8px #d3d3d380;
+}
+.app-header .logo {
+  padding: 5px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.accounts {
+  margin-top: 20px;
+}
+.accounts header {
+  line-height: 1;
+}
+.accounts .name {
+  text-decoration: underline;
+}
+.accounts .edit-name {
+  margin-left: 5px;
+}
+.accounts .edit-name:hover {
+  color: #476374;
+}
+.accounts .empty-list {
+  padding: 5px 0;
+}
+.accounts article {
+  margin: 13px 0;
+}
+.accounts article p {
+  padding: 5px 0;
+}
+.accounts article a {
+  margin-right: 1rem;
+}
+
+.detailed-view {
+  margin-top: 20px;
+}
+.detailed-view h3 {
+  font-weight: 600;
+}
+.detailed-view form {
+  margin-top: 10px;
+}
+.detailed-view .input-group {
+  display: flex;
+}
+.detailed-view .form-control {
+  max-width: 150px;
+  font-weight: 500;
+  text-align: right;
+}
+.detailed-view .btn {
+  margin-left: 7px;
+  padding: 7px 25px;
+}
+.detailed-view .transactions-history {
+  margin-top: 10px;
+  overflow: auto;
+}
+.detailed-view .transactions-table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 0;
+  border: solid #dddddd;
+  border-width: 1px 1px 0 0;
+}
+.detailed-view .transactions-table th {
+  font-weight: 600;
+  background: #f1f1f1;
+  border: solid #dddddd;
+  border-width: 0 0 1px 1px;
+  padding: 5px 0;
+}
+.detailed-view .transactions-table td {
+  border: solid #dddddd;
+  border-width: 0 0 1px 1px;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+main {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 750px) {
+  main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  main > * {
+    flex: 1;
+  }
+}

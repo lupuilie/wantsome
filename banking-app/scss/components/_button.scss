@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+.btn {
+  background: $light-gray;
+  border: 1px solid $border-color;
+  box-shadow: $shadow-small;
+  transition: 0.2s ease;
+  transition-property: box-shadow, background-color;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    box-shadow: $shadow-small-hover;
+    border-color: $border-color-hover;
+  }
+}
+.btn.bg-secondary {
+  background: $bg-secondary;
+  box-shadow: 0 5px 8px #c5c5c5;
+  border-color: transparent;
+  color: $white;
+  &:hover {
+    background: $bg-secondary-hover;
+    box-shadow: 0 5px 8px #aaaaaa;
+  }
+  &:disabled {
+    background: #adadad;
+    cursor: default;
+  }
+}

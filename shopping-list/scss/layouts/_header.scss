@@ -1,0 +1,32 @@
+@use "../abstracts" as *;
+
+body > header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: $light-gray;
+  background: $white;
+
+  .app-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sidebar-toggler {
+    padding-right: 10px;
+  }
+  @media (min-width: 700px) {
+    .sidebar-toggler {
+      position: absolute;
+    }
+    .app-title {
+      margin-left: 0;
+    }
+  }
+}

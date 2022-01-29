@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+a {
+  color: #363636;
+}
+
+/* Fix material-icons alignment */
+.material-icons,
+.material-icons-outlined,
+.material-icons-round,
+.material-icons-sharp,
+.material-icons-two-tone {
+  vertical-align: middle;
+  line-height: 1px;
+}
+
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 600px) {
+  .container {
+    max-width: 600px;
+  }
+}
+
+.btn, .btn.bg-transparent, .bg-transparent.btn-bordered, .bg-transparent.btn-rounded, .btn-rounded, .btn-bordered {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.btn:disabled, .btn-rounded:disabled, .btn-bordered:disabled {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.btn-bordered {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-rounded {
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.btn-rounded:hover {
+  color: #5b97f1;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+}
+
+.btn.bg-transparent, .bg-transparent.btn-bordered, .bg-transparent.btn-rounded {
+  background-color: transparent;
+}
+
+.form-control {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+}
+.form-control:disabled {
+  background: #ddd;
+}
+
+body > header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  color: #363636;
+  background: #fff;
+}
+body > header .app-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body > header .sidebar-toggler {
+  padding-right: 10px;
+}
+@media (min-width: 700px) {
+  body > header .sidebar-toggler {
+    position: absolute;
+  }
+  body > header .app-title {
+    margin-left: 0;
+  }
+}
+
+.shopping-list {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  background: #fff;
+  /* Add item */
+  /* Suggestions of products */
+  /* Empty list */
+}
+.shopping-list .add-item {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.shopping-list .submit-item {
+  padding: 15px;
+}
+.shopping-list .item-input {
+  width: 100%;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px;
+}
+.shopping-list .suggestions-wrapper {
+  position: relative;
+}
+.shopping-list .suggestions-controls {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+.shopping-list .suggestions-controls.left {
+  left: 5px;
+}
+.shopping-list .suggestions-controls.right {
+  right: 5px;
+}
+.shopping-list .suggestions-controls button {
+  height: 25px;
+  width: 25px;
+}
+.shopping-list .suggestions-controls.visible {
+  visibility: visible;
+}
+.shopping-list .suggestions {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 15px;
+  border-bottom: 1px solid #ccc;
+  overflow: auto;
+  position: relative;
+}
+.shopping-list .suggestions::-webkit-scrollbar {
+  display: none;
+}
+.shopping-list .suggested-item {
+  padding: 3px 8px;
+  display: flex;
+  align-items: center;
+}
+.shopping-list .suggested-item span {
+  font-weight: 500;
+  padding-left: 5px;
+}
+.shopping-list .suggested-item img {
+  vertical-align: middle;
+  max-height: 40px;
+}
+.shopping-list .suggested-item:hover {
+  background-color: #e5effd;
+  color: #2a61d8;
+}
+.shopping-list .items-list {
+  list-style: none;
+}
+.shopping-list .shopping-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  height: 65px;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+.shopping-list .shopping-item:hover {
+  background: #e5effd;
+}
+.shopping-list .shopping-item:hover .shopping-item-options {
+  opacity: 1;
+}
+.shopping-list .shopping-item .item-details {
+  width: 100%;
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.shopping-list .shopping-item .item-details p {
+  font-weight: 500;
+  color: #000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.shopping-list .shopping-item .item-details .note {
+  font-size: 13px;
+}
+.shopping-list .shopping-item .image {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.12);
+  border-radius: 5px;
+}
+.shopping-list .shopping-item .default {
+  padding: 8px;
+}
+.shopping-list .shopping-item-options {
+  display: flex;
+  opacity: 1;
+  gap: 5px;
+}
+.shopping-list .shopping-item-options button {
+  color: #363636;
+}
+.shopping-list .empty-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0 4rem;
+}
+.shopping-list .empty-list .big-round-icon {
+  height: 180px;
+  width: 180px;
+  background: #e5effd;
+  color: #2a61d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.shopping-list .empty-list strong {
+  padding: 30px;
+}
+.shopping-list .empty-list p {
+  max-width: 300px;
+}
+.shopping-list .empty-list.hide {
+  display: none;
+}
+@media (min-width: 600px) {
+  .shopping-list .shopping-item-options {
+    opacity: 0;
+  }
+  .shopping-list .shopping-item .item-name {
+    max-width: 45ch;
+  }
+}
+
+.checked-list {
+  border-top: 1px solid #ccc;
+  background: #f1f1f1;
+  color: #9c9c9c;
+  cursor: pointer;
+}
+.checked-list .title {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 60px;
+  font-weight: 500;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+.checked-list .title:hover {
+  background-color: #e0e0e0;
+}
+.checked-list .icon {
+  width: 40px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+.checked-list .title-count {
+  padding-left: 10px;
+}
+.checked-list .shopping-item:hover {
+  background-color: #e0e0e0;
+}
+.checked-list .image {
+  filter: grayscale(100%);
+}
+.checked-list .item-name {
+  text-decoration: line-through;
+}
+.checked-list .items-list {
+  transform: scaleY(0);
+  transition: transform 0.1s ease;
+  transform-origin: top;
+}
+.checked-list.visible .items-list {
+  transform: scaleY(1);
+}
+.checked-list.visible .icon {
+  transform: rotate(-180deg);
+}
+
+aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80vw;
+  min-width: 260px;
+  max-width: 400px;
+  height: 100vh;
+  background: white;
+  overflow: auto;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  box-shadow: 10px 0 25px rgba(0, 0, 0, 0.15);
+}
+aside header h3 {
+  font-weight: 500;
+  padding: 1.8rem 15px;
+  font-size: 16px;
+}
+aside .shopping-lists {
+  list-style: none;
+  color: #2a61d8;
+}
+aside .list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f1f1f1;
+  height: 70px;
+  padding: 0 15px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  cursor: pointer;
+}
+aside .list:hover {
+  background: #e0e0e0;
+}
+aside .btn-delete-list {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+aside .btn-delete-list span {
+  color: #363636;
+}
+aside .list-title {
+  font-weight: 500;
+  font-size: 15px;
+}
+aside .count {
+  font-size: 14px;
+}
+aside .wrapper-create-list {
+  display: flex;
+  justify-content: center;
+}
+aside .btn-create-list {
+  display: block;
+  font-weight: 500;
+  color: #2a61d8;
+  width: 100%;
+  height: 60px;
+}
+aside .btn-create-list:hover {
+  background-color: #e5effd;
+}

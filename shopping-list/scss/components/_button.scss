@@ -1,0 +1,32 @@
+.btn {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+.btn:disabled {
+  background-color: #ddd;
+  cursor: default;
+}
+
+.btn-bordered {
+  @extend .btn;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-rounded {
+  @extend .btn;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  &:hover {
+    color: #5b97f1;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.btn.bg-transparent {
+  @extend .btn;
+  background-color: transparent;
+}

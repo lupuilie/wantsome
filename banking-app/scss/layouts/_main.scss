@@ -1,0 +1,13 @@
+main {
+  margin-bottom: 50px;
+}
+@media (min-width: 750px) {
+  main {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    & > * {
+      flex: 1;
+    }
+  }
+}

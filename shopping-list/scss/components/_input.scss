@@ -1,0 +1,9 @@
+.form-control {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #000;
+  &:disabled {
+    background: #ddd;
+  }
+}

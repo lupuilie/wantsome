@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80vw;
+  min-width: 260px;
+  max-width: 400px;
+  height: 100vh;
+  background: white;
+  overflow: auto;
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease;
+  z-index: 100;
+  box-shadow: 10px 0 25px rgba(0, 0, 0, 0.15);
+  header h3 {
+    font-weight: 500;
+    padding: 1.8rem 15px;
+    font-size: 16px;
+  }
+  .shopping-lists {
+    list-style: none;
+    color: $blue;
+  }
+  .list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: $app-bg;
+    height: 70px;
+    padding: 0 15px;
+    border-bottom: 1px solid $border-color;
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      background: $disabled-hover;
+    }
+  }
+  .btn-delete-list {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    span {
+      color: $light-gray;
+    }
+  }
+  .list-title {
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .count {
+    font-size: 14px;
+  }
+  .wrapper-create-list {
+    display: flex;
+    justify-content: center;
+  }
+  .btn-create-list {
+    display: block;
+    font-weight: 500;
+    color: $blue;
+    width: 100%;
+    height: 60px;
+
+    &:hover {
+      background-color: $hover-color;
+    }
+  }
+}

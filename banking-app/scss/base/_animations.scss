@@ -1,0 +1,12 @@
+.fadeIn {
+  opacity: 0;
+  transform: scale(0);
+  animation: fadeIn 0.2s ease;
+  animation-fill-mode: forwards;
+}
+@keyframes fadeIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

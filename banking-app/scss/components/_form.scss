@@ -1,0 +1,38 @@
+@use "../abstracts" as *;
+
+.input-group {
+  label {
+    display: block;
+    font-size: 14px;
+  }
+  .input-group.inline {
+    display: inline-block;
+  }
+}
+.inline-group {
+  display: flex;
+  gap: 1rem;
+  & > * {
+    width: 100%;
+  }
+}
+
+.form-control {
+  outline: none;
+  width: 100%;
+  border: 1px solid $border-color;
+  padding: 5px 7px;
+}
+.form-control.text-right {
+  text-align: right;
+}
+.form-control.invalid {
+  border-color: #ff0000;
+}
+
+select {
+  outline: none;
+  border: 1px solid $border-color;
+  padding: 5px 7px;
+  width: 100%;
+}

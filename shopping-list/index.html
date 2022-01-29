@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.min.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="sidebar-toggler"
+        ><span class="material-icons"> menu </span>
+      </a>
+      <div class="app-header container">
+        <h1 class="app-title">Shopping List</h1>
+        <a href="#"><span class="material-icons"> share </span></a>
+      </div>
+    </header>
+    <aside>
+      <header>
+        <h3>Primary List</h3>
+      </header>
+      <ul class="shopping-lists">
+        <li class="list">
+          <h4 class="list-title">Shopping List</h4>
+          <p class="count">1 item</p>
+          <button class="btn bg-transparent btn-delete-list">
+            <span class="material-icons">delete</span>
+          </button>
+        </li>
+      </ul>
+      <div class="wrapper-create-list">
+        <button class="btn btn-create-list">CREATE A NEW LIST</button>
+      </div>
+      <p>
+        <span class="material-icons"> error_outline </span> Work in progress
+      </p>
+    </aside>
+    <main>
+      <section class="shopping-list container">
+        <div class="add-item-wrapper">
+          <form class="add-item">
+            <button class="btn submit-item">
+              <span class="material-icons"> add </span>
+            </button>
+            <input
+              type="text"
+              class="form-control item-input"
+              placeholder="Add item"
+              autocomplete="off"
+              aria-label="Add Shopping Item"
+            />
+          </form>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/script.js"></script>
+  </body>
+</html>

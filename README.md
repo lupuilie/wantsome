@@ -1,25 +1,5 @@
 # Wantsome Homeworks
 
-**Bold**
-
-_Italic_
-
-~~line-through~~
-
-**Bold and _italic_**
-
-**_Important and italic_**
-
-> Quote here
-
-This is a [link](https://github.com)
-
-- List Item
-- List Item
-- List Item
-
-1.  List Item
-2.  List Item
-3.  Nested List Item
-    - Nested Item
-      - Nested Item
+1. [Book List](https://lupuilie.github.io/wantsome/book-list)
+1. [Shopping List](https://lupuilie.github.io/wantsome/shopping-list)
+1. [Banking App](https://lupuilie.github.io/wantsome/banking-app)

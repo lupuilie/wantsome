@@ -1,0 +1,23 @@
+@use "../abstracts" as *;
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: $default-ff;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: $light-gray;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

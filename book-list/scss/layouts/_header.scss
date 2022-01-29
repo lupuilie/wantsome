@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.app-header {
+  margin-top: 35px;
+  .logo {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+
+    line-height: 1;
+    a {
+      color: $light-green;
+    }
+    span {
+      color: $dark-green;
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+      height: 2px;
+      width: 100%;
+      background: linear-gradient(90deg, $dark-green, $light-green);
+      transform: scaleX(0%);
+      transform-origin: left;
+      transition: transform 0.2s;
+      transition-timing-function: ease;
+    }
+    a:hover::after {
+      transform: scaleX(100%);
+    }
+  }
+  p {
+    margin: 0;
+    color: $dark-blue;
+    line-height: 1;
+  }
+}

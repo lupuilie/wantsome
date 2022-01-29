@@ -1,0 +1,31 @@
+@use "../abstracts" as *;
+
+.accounts {
+  margin-top: 20px;
+  header {
+    line-height: 1;
+  }
+
+  .name {
+    text-decoration: underline;
+  }
+  .edit-name {
+    margin-left: 5px;
+    &:hover {
+      color: $gray;
+    }
+  }
+  .empty-list {
+    padding: 5px 0;
+  }
+  article {
+    margin: 13px 0;
+
+    p {
+      padding: 5px 0;
+    }
+    a {
+      margin-right: 1rem;
+    }
+  }
+}

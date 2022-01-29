@@ -1,0 +1,13 @@
+@use "../abstracts" as *;
+
+.app-header {
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+  padding: 15px;
+  box-shadow: $shadow-small;
+  .logo {
+    padding: 5px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}

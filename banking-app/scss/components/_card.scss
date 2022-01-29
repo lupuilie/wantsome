@@ -1,0 +1,20 @@
+@use "../abstracts" as *;
+
+.card {
+  background-color: $white;
+  box-shadow: $shadow-small;
+  border: 1px solid $border-color;
+  padding: 13px;
+  border-radius: 5px;
+  transition: box-shadow 0.15s ease;
+}
+
+.card-small {
+  @extend .card;
+
+  background-color: $light-gray;
+  &:hover {
+    box-shadow: $shadow-small-hover;
+    border-color: $border-color-hover;
+  }
+}
