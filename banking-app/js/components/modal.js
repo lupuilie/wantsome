@@ -20,7 +20,7 @@ function Modal() {
   modalCloseBtn.append(materialIcon("close"));
   modalCloseBtn.addEventListener("click", closeModal);
 
-  /* Edit user name _________*/
+  /* Edit user name */
   function editUserName() {
     clearTextContent();
 
@@ -69,7 +69,7 @@ function Modal() {
     formControl.focus();
   }
 
-  /* Edit account name _________*/
+  /* Edit account name */
   function editAccount(account, setAccountName) {
     clearTextContent();
 
@@ -115,7 +115,7 @@ function Modal() {
     formControl.focus();
   }
 
-  /* Add Account ____________*/
+  /* Add Account */
   function addAccount() {
     clearTextContent();
 
@@ -161,7 +161,7 @@ function Modal() {
     formControl.focus();
   }
 
-  /* Transfer ________*/
+  /* Transfer */
   function transfer(account) {
     clearTextContent();
 
