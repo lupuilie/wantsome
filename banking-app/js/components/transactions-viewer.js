@@ -45,8 +45,13 @@ function transactionsViewerModule(account) {
     }
   }
 
+  function getAccountViewing() {
+    return account;
+  }
+
   return {
     changeAccount,
+    getAccountViewing,
   };
 }
 

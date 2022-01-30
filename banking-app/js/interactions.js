@@ -14,8 +14,14 @@ export function onSubmitAddAccount(userInput) {
 }
 
 export const editCustomerNameClick = () => appModal.editUserName();
+
 export const editAccountNameClick = (account, { edit }) =>
   appModal.editAccount(account, edit);
+export const accountNameChanged = (account) => {
+  const transactionsViewingAcc = transactionsViewer.getAccountViewing();
+  if (transactionsViewingAcc.id === account.id)
+    transactionsViewer.changeAccount(account);
+};
 
 export const transferClick = (account) => appModal.transfer(account);
 export const transferSubmit = ({ amount, transferFrom, transferTo }) => {

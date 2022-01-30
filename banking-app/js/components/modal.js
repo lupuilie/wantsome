@@ -1,6 +1,10 @@
 import createElement from "../utils/createElement.js";
 import materialIcon from "../utils/materialIcon.js";
-import { onSubmitAddAccount, transferSubmit } from "../interactions.js";
+import {
+  onSubmitAddAccount,
+  accountNameChanged,
+  transferSubmit,
+} from "../interactions.js";
 import { setCustomerNameText } from "../elements.js";
 import { customer, minTransactionAmount } from "../script.js";
 import { isLettersOnly, isDigitsOnly } from "../utils/inputValidations.js";
@@ -65,7 +69,7 @@ function Modal() {
     formControl.focus();
   }
 
-  /* Edit user name _________*/
+  /* Edit account name _________*/
   function editAccount(account, setAccountName) {
     clearTextContent();
 
@@ -99,6 +103,7 @@ function Modal() {
 
       account.changeName(formControl.value.trim());
       setAccountName(account.getName());
+      accountNameChanged(account);
 
       closeModal();
     });
